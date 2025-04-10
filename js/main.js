@@ -600,7 +600,7 @@ function updateStatCard(index, value, growth, isPositive) {
 
 // Update popular insurers table
 function updatePopularInsurersTable(insurers) {
-    const table = document.querySelector('#dashboard-view .card:nth-child(5) table tbody');
+    const table = document.querySelector('#dashboard-view #popular-insurers table tbody');
     if (!table) return;
     
     table.innerHTML = '';
@@ -704,7 +704,7 @@ function updateRecentSimulationsTable() {
         { id: 3, client: "António Ferreira", date: "01/04/2025", type: "travel", bestOffer: "Allianz Global Travel", premium: 32.25, status: "completed" }
     ];
     
-    const table = document.querySelector('#dashboard-view .card:last-child table tbody');
+    const table = document.querySelector('#dashboard-view #recent-simulations-table table tbody');
     if (!table) return;
     
     table.innerHTML = '';
