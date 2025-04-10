@@ -1,0 +1,6 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+    <rect width="200" height="60" fill="white"/>
+    <rect x="10" y="10" width="40" height="40" rx="5" fill="#ED1C24"/>
+    <text x="60" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">Mapfre</text>
+</svg>
