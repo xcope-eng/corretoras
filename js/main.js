@@ -46,6 +46,13 @@ function setupEventListeners() {
         loadInsurancePoliciesData();
     });
     
+    document.getElementById('auto-insurance-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        showView('auto-insurance');
+        setActiveNavLink('auto-insurance-link');
+        loadAutoInsuranceData();
+    });
+    
     document.getElementById('history-link').addEventListener('click', function(e) {
         e.preventDefault();
         showView('history');
@@ -120,6 +127,7 @@ function showView(viewName) {
     document.getElementById('dashboard-view').style.display = 'none';
     document.getElementById('clients-view').style.display = 'none';
     document.getElementById('insurance-view').style.display = 'none';
+    document.getElementById('auto-insurance-view').style.display = 'none';
     document.getElementById('history-view').style.display = 'none';
     document.getElementById('settings-view').style.display = 'none';
     document.getElementById('client-form-section').style.display = 'none';
@@ -132,6 +140,8 @@ function showView(viewName) {
         document.getElementById('clients-view').style.display = 'block';
     } else if (viewName === 'insurance') {
         document.getElementById('insurance-view').style.display = 'block';
+    } else if (viewName === 'auto-insurance') {
+        document.getElementById('auto-insurance-view').style.display = 'block';
     } else if (viewName === 'history') {
         document.getElementById('history-view').style.display = 'block';
     } else if (viewName === 'settings') {
@@ -196,7 +206,14 @@ function handleClientFormSubmission() {
             income: parseInt(document.getElementById('income').value || "45000"),
             travelPlanned: document.getElementById('travel-planned').checked,
             destination: document.getElementById('destination')?.value || "",
-            duration: parseInt(document.getElementById('duration')?.value || "0")
+            duration: parseInt(document.getElementById('duration')?.value || "0"),
+            // Add vehicle data
+            vehicle: {
+                licensePlate: document.getElementById('license-plate').value || "",
+                brand: document.getElementById('car-brand').value || "",
+                model: document.getElementById('car-model').value || "",
+                year: parseInt(document.getElementById('car-year').value || "2024")
+            }
         };
         
         console.log("Client data:", clientData);
@@ -282,11 +299,21 @@ function displayInsuranceOffers(offers) {
                 }
             });
         }
+
+        // Process auto insurance offers
+        if (offers.auto && offers.auto.length > 0) {
+            const autoContainer = document.getElementById('auto-offers-container');
+            offers.auto.forEach(offer => {
+                const offerElement = createOfferElement(template, offer);
+                if (autoContainer) {
+                    autoContainer.appendChild(offerElement);
+                }
+            });
+        }
         
         console.log("Offers displayed successfully");
     } catch (error) {
         console.error("Error displaying offers:", error);
-        alert("Ocorreu um erro ao exibir as ofertas. Por favor tente novamente.");
     }
 }
 
@@ -295,7 +322,8 @@ function clearOfferContainers() {
     const containers = [
         document.getElementById('life-offers-container'),
         document.getElementById('health-offers-container'),
-        document.getElementById('travel-offers-container')
+        document.getElementById('travel-offers-container'),
+        document.getElementById('auto-offers-container')
     ];
     
     containers.forEach(container => {
@@ -529,6 +557,8 @@ function getInsuranceTypeText(type) {
         return 'Saúde';
     } else if (type === 'travel') {
         return 'Viagem';
+    } else if (type === 'auto') {
+        return 'Automóvel';
     }
     return type;
 }
@@ -749,105 +779,129 @@ function updateRecentSimulationsTable() {
 
 // Load clients data
 function loadClientsData() {
-    try {
-        // Sample clients
-        const clients = [
-            { name: "João Silva", email: "joao.silva@email.com", phone: "+351 912 345 678", age: 42, occupation: "Engenheiro", policies: 2, status: "active" },
-            { name: "Maria Santos", email: "maria.santos@email.com", phone: "+351 923 456 789", age: 35, occupation: "Médica", policies: 3, status: "active" },
-            { name: "António Ferreira", email: "antonio.ferreira@email.com", phone: "+351 934 567 890", age: 28, occupation: "Professor", policies: 1, status: "active" },
-            { name: "Sofia Oliveira", email: "sofia.oliveira@email.com", phone: "+351 945 678 901", age: 39, occupation: "Advogada", policies: 2, status: "active" },
-            { name: "Pedro Costa", email: "pedro.costa@email.com", phone: "+351 956 789 012", age: 45, occupation: "Empresário", policies: 4, status: "active" }
-        ];
-        
-        // Get clients table
-        const clientsTable = document.querySelector('#clients-view .table tbody');
-        if (!clientsTable) return;
-        
-        // Clear existing rows
-        clientsTable.innerHTML = '';
-        
-        // Add client rows
-        clients.forEach(client => {
-            const tr = document.createElement('tr');
-            
-            // Client info cell
-            const tdInfo = document.createElement('td');
-            const clientInfo = document.createElement('div');
-            clientInfo.className = 'client-info';
-            
-            const avatar = document.createElement('div');
-            avatar.className = 'client-avatar';
-            avatar.textContent = client.name.charAt(0);
-            
-            const infoDiv = document.createElement('div');
-            
-            const name = document.createElement('p');
-            name.className = 'client-name';
-            name.textContent = client.name;
-            
-            const email = document.createElement('p');
-            email.className = 'client-email';
-            email.textContent = client.email;
-            
-            infoDiv.appendChild(name);
-            infoDiv.appendChild(email);
-            
-            clientInfo.appendChild(avatar);
-            clientInfo.appendChild(infoDiv);
-            
-            tdInfo.appendChild(clientInfo);
-            
-            // Contact cell
-            const tdContact = document.createElement('td');
-            tdContact.textContent = client.phone;
-            
-            // Age cell
-            const tdAge = document.createElement('td');
-            tdAge.textContent = client.age;
-            
-            // Occupation cell
-            const tdOccupation = document.createElement('td');
-            tdOccupation.textContent = client.occupation;
-            
-            // Policies cell
-            const tdPolicies = document.createElement('td');
-            tdPolicies.textContent = client.policies;
-            
-            // Status cell
-            const tdStatus = document.createElement('td');
-            const statusBadge = document.createElement('span');
-            statusBadge.className = 'status-badge status-active';
-            statusBadge.textContent = 'Ativo';
-            tdStatus.appendChild(statusBadge);
-            
-            // Actions cell
-            const tdActions = document.createElement('td');
-            
-            const viewBtn = document.createElement('button');
-            viewBtn.className = 'btn btn-sm btn-outline-primary me-1';
-            viewBtn.innerHTML = '<i class="bi bi-eye"></i>';
-            
-            const editBtn = document.createElement('button');
-            editBtn.className = 'btn btn-sm btn-outline-secondary';
-            editBtn.innerHTML = '<i class="bi bi-pencil"></i>';
-            
-            tdActions.appendChild(viewBtn);
-            tdActions.appendChild(editBtn);
-            
-            // Add cells to row
-            tr.appendChild(tdInfo);
-            tr.appendChild(tdContact);
-            tr.appendChild(tdAge);
-            tr.appendChild(tdOccupation);
-            tr.appendChild(tdPolicies);
-            tr.appendChild(tdStatus);
-            tr.appendChild(tdActions);
-            
-            // Add row to table
-            clientsTable.appendChild(tr);
+    const clientsTableBody = document.getElementById('clients-table-body');
+    if (!clientsTableBody) return;
+
+    // Sample client data - in a real app, this would come from an API
+    const clients = [
+        {
+            name: 'João Silva',
+            nif: '123456789',
+            contact: '+351 912 345 678',
+            age: 35,
+            occupation: 'Engenheiro',
+            policies: 2,
+            status: 'Ativo'
+        },
+        {
+            name: 'Maria Santos',
+            nif: '987654321',
+            contact: '+351 923 456 789',
+            age: 42,
+            occupation: 'Médica',
+            policies: 3,
+            status: 'Ativo'
+        },
+        {
+            name: 'António Ferreira',
+            nif: '456789123',
+            contact: '+351 934 567 890',
+            age: 28,
+            occupation: 'Professor',
+            policies: 1,
+            status: 'Ativo'
+        },
+        {
+            name: 'Sofia Oliveira',
+            nif: '789123456',
+            contact: '+351 945 678 901',
+            age: 39,
+            occupation: 'Advogada',
+            policies: 2,
+            status: 'Ativo'
+        }
+    ];
+
+    function renderClients(filteredClients) {
+        clientsTableBody.innerHTML = '';
+        filteredClients.forEach(client => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${client.name}</td>
+                <td>${client.nif}</td>
+                <td>${client.contact}</td>
+                <td>${client.age}</td>
+                <td>${client.occupation}</td>
+                <td>${client.policies}</td>
+                <td><span class="badge bg-success">${client.status}</span></td>
+                <td>
+                    <button class="btn btn-sm btn-outline-primary me-1">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                </td>
+            `;
+            clientsTableBody.appendChild(row);
         });
-    } catch (error) {
-        console.error("Error loading clients data:", error);
+    }
+
+    // Initial render
+    renderClients(clients);
+
+    // Search functionality
+    const searchInput = document.getElementById('client-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredClients = clients.filter(client => 
+                client.name.toLowerCase().includes(searchTerm) ||
+                client.nif.includes(searchTerm)
+            );
+            renderClients(filteredClients);
+        });
+    }
+
+    // Filter functionality
+    const statusFilter = document.getElementById('client-status-filter');
+    const typeFilter = document.getElementById('client-type-filter');
+
+    function applyFilters() {
+        const statusValue = statusFilter.value;
+        const typeValue = typeFilter.value;
+        const searchTerm = searchInput.value.toLowerCase();
+
+        let filteredClients = clients;
+
+        if (statusValue !== 'all') {
+            filteredClients = filteredClients.filter(client => 
+                client.status.toLowerCase() === statusValue
+            );
+        }
+
+        if (typeValue !== 'all') {
+            filteredClients = filteredClients.filter(client => 
+                client.type === typeValue
+            );
+        }
+
+        if (searchTerm) {
+            filteredClients = filteredClients.filter(client => 
+                client.name.toLowerCase().includes(searchTerm) ||
+                client.nif.includes(searchTerm)
+            );
+        }
+
+        renderClients(filteredClients);
+    }
+
+    if (statusFilter) {
+        statusFilter.addEventListener('change', applyFilters);
+    }
+
+    if (typeFilter) {
+        typeFilter.addEventListener('change', applyFilters);
     }
 }
 
@@ -1037,5 +1091,72 @@ function loadSimulationsHistoryData() {
         });
     } catch (error) {
         console.error("Error loading simulations history data:", error);
+    }
+}
+
+// Load auto insurance data
+function loadAutoInsuranceData() {
+    try {
+        // Sample auto insurance data
+        const autoInsuranceData = [
+            { client: "João Silva", vehicle: "Volkswagen Golf 1.6 TDI", licensePlate: "AA-00-00", insurer: "Fidelidade", premium: 45.75, validity: "01/01/2025", status: "active" },
+            { client: "Maria Santos", vehicle: "BMW 320d", licensePlate: "BB-11-11", insurer: "Ageas", premium: 78.50, validity: "15/02/2025", status: "active" },
+            { client: "Pedro Costa", vehicle: "Mercedes C200", licensePlate: "CC-22-22", insurer: "Allianz", premium: 65.30, validity: "01/03/2025", status: "active" }
+        ];
+        
+        // Get auto insurance table
+        const autoInsuranceTable = document.querySelector('#auto-insurance-view .table tbody');
+        if (!autoInsuranceTable) return;
+        
+        // Clear existing rows
+        autoInsuranceTable.innerHTML = '';
+        
+        // Add rows
+        autoInsuranceData.forEach(item => {
+            const tr = document.createElement('tr');
+            
+            const tdClient = document.createElement('td');
+            tdClient.textContent = item.client;
+            
+            const tdVehicle = document.createElement('td');
+            tdVehicle.textContent = item.vehicle;
+            
+            const tdLicensePlate = document.createElement('td');
+            tdLicensePlate.textContent = item.licensePlate;
+            
+            const tdInsurer = document.createElement('td');
+            tdInsurer.textContent = item.insurer;
+            
+            const tdPremium = document.createElement('td');
+            tdPremium.textContent = `${item.premium.toFixed(2)} €/mês`;
+            
+            const tdValidity = document.createElement('td');
+            tdValidity.textContent = item.validity;
+            
+            const tdStatus = document.createElement('td');
+            const statusBadge = document.createElement('span');
+            statusBadge.className = 'badge bg-success';
+            statusBadge.textContent = 'Ativo';
+            tdStatus.appendChild(statusBadge);
+            
+            const tdActions = document.createElement('td');
+            const viewBtn = document.createElement('button');
+            viewBtn.className = 'btn btn-sm btn-outline-primary';
+            viewBtn.textContent = 'Ver';
+            tdActions.appendChild(viewBtn);
+            
+            tr.appendChild(tdClient);
+            tr.appendChild(tdVehicle);
+            tr.appendChild(tdLicensePlate);
+            tr.appendChild(tdInsurer);
+            tr.appendChild(tdPremium);
+            tr.appendChild(tdValidity);
+            tr.appendChild(tdStatus);
+            tr.appendChild(tdActions);
+            
+            autoInsuranceTable.appendChild(tr);
+        });
+    } catch (error) {
+        console.error("Error loading auto insurance data:", error);
     }
 }

@@ -4,38 +4,117 @@
 window.apiSimulation = (function() {
     // Simulate API call to get insurance offers
     function generateSimulatedOffers(clientData, riskProfile) {
-        console.log("Simulating API calls to insurance companies...");
-        console.log("Client data:", clientData);
-        console.log("Risk profile:", riskProfile);
+        console.log("Generating simulated offers for client:", clientData);
         
-        try {
-            // In a real implementation, this would make actual API calls to insurance companies
-            // For now, we'll use our insurance offer model to generate simulated offers
-            
-            // Add a small delay to simulate network latency (for demonstration purposes)
-            const startTime = new Date().getTime();
-            
-            // Generate offers using our model
-            const offers = window.insuranceOfferModel.generateAllOffers(clientData);
-            
-            // Log the generated offers
-            console.log("Generated offers:", offers);
-            
-            // Simulate API response time (minimum 500ms for demo purposes)
-            const endTime = new Date().getTime();
-            const elapsedTime = endTime - startTime;
-            
-            if (elapsedTime < 500) {
-                console.log(`Simulating additional API latency (${500 - elapsedTime}ms)...`);
-            }
-            
-            return offers;
-        } catch (error) {
-            console.error("Error in API simulation:", error);
-            
-            // Return fallback offers in case of error
-            return createFallbackOffers(clientData);
-        }
+        // Sample insurance offers
+        const offers = {
+            life: [
+                {
+                    company: "Fidelidade",
+                    product: "Vida Mais",
+                    description: "Seguro de vida com cobertura completa",
+                    premium: 45.75,
+                    coverages: ["Morte", "Invalidez", "Doenças Graves", "Desemprego"],
+                    logoPath: "img/logos/fidelidade.svg"
+                },
+                {
+                    company: "Ageas",
+                    product: "Vida Protect",
+                    description: "Proteção para toda a família",
+                    premium: 52.30,
+                    coverages: ["Morte", "Invalidez", "Doenças Graves"],
+                    logoPath: "img/logos/ageas.svg"
+                },
+                {
+                    company: "Allianz",
+                    product: "Vida Segura",
+                    description: "Seguro de vida flexível e abrangente",
+                    premium: 48.90,
+                    coverages: ["Morte", "Invalidez", "Doenças Graves", "Acidentes"],
+                    logoPath: "img/logos/allianz.svg"
+                }
+            ],
+            health: [
+                {
+                    company: "Ageas",
+                    product: "Médis Premium",
+                    description: "Cobertura de saúde premium",
+                    premium: 78.50,
+                    coverages: ["Consultas", "Exames", "Internamentos", "Medicamentos"],
+                    logoPath: "img/logos/ageas.svg"
+                },
+                {
+                    company: "Fidelidade",
+                    product: "Multicare Plus",
+                    description: "Plano de saúde completo",
+                    premium: 85.20,
+                    coverages: ["Consultas", "Exames", "Internamentos", "Medicamentos", "Dentista"],
+                    logoPath: "img/logos/fidelidade.svg"
+                },
+                {
+                    company: "Allianz",
+                    product: "Saúde Vital",
+                    description: "Proteção de saúde essencial",
+                    premium: 72.40,
+                    coverages: ["Consultas", "Exames", "Internamentos", "Dentista"],
+                    logoPath: "img/logos/allianz.svg"
+                }
+            ],
+            travel: [
+                {
+                    company: "Allianz",
+                    product: "Global Travel",
+                    description: "Seguro de viagem internacional",
+                    premium: 32.25,
+                    coverages: ["Cancelamento", "Assistência", "Bagagem", "Acidentes"],
+                    logoPath: "img/logos/allianz.svg"
+                },
+                {
+                    company: "Fidelidade",
+                    product: "Travel Care",
+                    description: "Proteção completa em viagem",
+                    premium: 35.80,
+                    coverages: ["Cancelamento", "Assistência", "Bagagem", "Acidentes", "Saúde"],
+                    logoPath: "img/logos/fidelidade.svg"
+                },
+                {
+                    company: "Tranquilidade",
+                    product: "Viagem Segura",
+                    description: "Seguro de viagem abrangente",
+                    premium: 29.90,
+                    coverages: ["Cancelamento", "Assistência", "Bagagem", "Saúde"],
+                    logoPath: "img/logos/tranquilidade.svg"
+                }
+            ],
+            auto: [
+                {
+                    company: "Fidelidade",
+                    product: "Auto Total",
+                    description: "Cobertura completa para o seu automóvel",
+                    premium: 65.90,
+                    coverages: ["Danos Próprios", "Responsabilidade Civil", "Assistência em Viagem", "Vidros", "Roubo", "Incêndio"],
+                    logoPath: "img/logos/fidelidade.svg"
+                },
+                {
+                    company: "Ageas",
+                    product: "Auto Premium",
+                    description: "Proteção premium para o seu veículo",
+                    premium: 72.50,
+                    coverages: ["Danos Próprios", "Responsabilidade Civil", "Assistência em Viagem", "Vidros", "Roubo", "Incêndio"],
+                    logoPath: "img/logos/ageas.svg"
+                },
+                {
+                    company: "Allianz",
+                    product: "Auto Plus",
+                    description: "Seguro automóvel com coberturas adicionais",
+                    premium: 68.75,
+                    coverages: ["Danos Próprios", "Responsabilidade Civil", "Assistência em Viagem", "Vidros", "Roubo", "Incêndio"],
+                    logoPath: "img/logos/allianz.svg"
+                }
+            ]
+        };
+        
+        return offers;
     }
     
     // Create fallback offers in case the main generation fails
