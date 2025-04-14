@@ -643,6 +643,21 @@
                                         <input type="number" class="form-control" id="income" placeholder="Rendimento anual">
                                     </div>
                                 </div>
+
+                                <div class="section-title">
+                                    <h4>Informação sobre Automóvel</h4>
+                                </div>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="occupation" class="form-label">Modelo do carro</label>
+                                        <input type="text" class="form-control" id="automodel" placeholder="Modelo">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="income" class="form-label">Valor do carro</label>
+                                        <input type="number" class="form-control" id="carValue" placeholder="Valor do carro">
+                                    </div>
+                                </div>
                                 
                                 <div class="section-title">
                                     <h4>Informação de Viagem</h4>
@@ -716,6 +731,11 @@
                                         <i class="bi bi-airplane"></i> Seguro de Viagem
                                     </button>
                                 </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="auto-tab" data-bs-toggle="tab" data-bs-target="#auto-tab-pane" type="button" role="tab" aria-controls="auto-tab-pane" aria-selected="false">
+                                        <i class="bi bi-vehicle-front"></i> Seguro Automóvel
+                                    </button>
+                                </li>
                             </ul>
                             
                             <!-- Tab Content -->
@@ -738,6 +758,12 @@
                                 <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel" aria-labelledby="travel-tab" tabindex="0">
                                     <div class="row mt-4" id="travel-offers-container">
                                         <!-- Travel insurance offers will be added here dynamically -->
+                                    </div>
+                                </div>
+                                <!-- Auto Insurance Tab -->
+                                <div class="tab-pane fade" id="auto-tab-pane" role="tabpanel" aria-labelledby="auto-tab" tabindex="0">
+                                    <div class="row mt-4" id="auto-offers-container">
+                                        <!-- Auto insurance offers will be added here dynamically -->
                                     </div>
                                 </div>
                             </div>

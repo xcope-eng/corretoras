@@ -196,7 +196,8 @@ function handleClientFormSubmission() {
             income: parseInt(document.getElementById('income').value || "45000"),
             travelPlanned: document.getElementById('travel-planned').checked,
             destination: document.getElementById('destination')?.value || "",
-            duration: parseInt(document.getElementById('duration')?.value || "0")
+            duration: parseInt(document.getElementById('duration')?.value || "0"),
+            carValue: parseInt(document.getElementById('car-value')?.value || "0"),
         };
         
         console.log("Client data:", clientData);
@@ -282,6 +283,17 @@ function displayInsuranceOffers(offers) {
                 }
             });
         }
+
+        // Process auto insurance offers
+        if (offers.auto && offers.auto.length > 0) {
+            const autoContainer = document.getElementById('auto-offers-container');
+            offers.auto.forEach(offer => {
+                const offerElement = createOfferElement(template, offer);
+                if (autoContainer) {
+                    autoContainer.appendChild(offerElement);
+                }
+            });
+        }
         
         console.log("Offers displayed successfully");
     } catch (error) {
@@ -295,7 +307,8 @@ function clearOfferContainers() {
     const containers = [
         document.getElementById('life-offers-container'),
         document.getElementById('health-offers-container'),
-        document.getElementById('travel-offers-container')
+        document.getElementById('travel-offers-container'),
+        document.getElementById('auto-offers-container')
     ];
     
     containers.forEach(container => {
@@ -393,7 +406,8 @@ function filterOffers(filterValue) {
     const offerContainers = [
         document.getElementById('life-offers-container'),
         document.getElementById('health-offers-container'),
-        document.getElementById('travel-offers-container')
+        document.getElementById('travel-offers-container'),
+        document.getElementById('auto-offers-container')
     ];
     
     // Apply filter to each container
@@ -452,6 +466,8 @@ function loadSavedSimulation(clientName, insuranceType) {
             tabToClick = document.getElementById('health-tab');
         } else if (insuranceType === 'travel') {
             tabToClick = document.getElementById('travel-tab');
+        } else if (insuranceType === 'auto') {
+            tabToClick = document.getElementById('auto-tab');
         }
         
         if (tabToClick) {
@@ -529,6 +545,8 @@ function getInsuranceTypeText(type) {
         return 'Saúde';
     } else if (type === 'travel') {
         return 'Viagem';
+    } else if (type === 'auto') {
+        return 'Automóvel';
     }
     return type;
 }
@@ -556,7 +574,8 @@ function loadDashboardData() {
             insuranceTypeDistribution: [
                 { type: "Vida", quantity: 87, percentage: 40 },
                 { type: "Saúde", quantity: 76, percentage: 35 },
-                { type: "Viagem", quantity: 52, percentage: 25 }
+                { type: "Viagem", quantity: 52, percentage: 25 },
+                { type: "Automóvel", quantity: 52, percentage: 25 }
             ]
         };
         

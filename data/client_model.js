@@ -12,7 +12,9 @@ window.clientModel = {
         income: 45000,
         travelPlanned: false,
         destination: "",
-        duration: 0
+        duration: 0,
+        carmodel: "",
+        carValue: 0,
     },
     
     // Validate client data
@@ -428,7 +430,8 @@ window.clientModel = {
             insuranceTypeDistribution: [
                 { type: "Vida", quantity: 87, percentage: 40 },
                 { type: "Saúde", quantity: 76, percentage: 35 },
-                { type: "Viagem", quantity: 52, percentage: 25 }
+                { type: "Viagem", quantity: 52, percentage: 25 },
+                { type: "Automóvel", quantity: 52, percentage: 25 }
             ]
         };
     }

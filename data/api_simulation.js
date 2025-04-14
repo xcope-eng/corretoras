@@ -45,6 +45,7 @@ window.apiSimulation = (function() {
         const baseLifePremium = 40 + (clientData.age ? clientData.age * 0.5 : 20);
         const baseHealthPremium = 60 + (clientData.age ? clientData.age * 0.7 : 30);
         const baseTravelPremium = 25 + (clientData.duration ? clientData.duration * 2 : 10);
+        const baseAutoPremium = 25 + (clientData.age ? clientData.age * 2 : 10);
         
         return {
             life: [
@@ -142,6 +143,46 @@ window.apiSimulation = (function() {
                     description: "O seguro de viagem mais completo, incluindo cobertura para atividades desportivas.",
                     contactLink: "#contact-tranquilidade"
                 }
+            ],
+            auto: [
+                {
+                    id: "fidelidade",
+                    name: "Fidelidade",
+                    logoPath: "img/logos/fidelidade.svg",
+                    products: [
+                        {
+                            name: "Automóvel Essencial",
+                            basePremium: baseAutoPremium,
+                            coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem"],
+                            description: "Seguro básico para automóveis com coberturas essenciais."
+                        },
+                        {
+                            name: "Automóvel Mais",
+                            basePremium: baseAutoPremium * 1.2,
+                            coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Danos Próprios", "Quebra Isolada de Vidros"],
+                            description: "Seguro completo para automóveis com proteção adicional."
+                        }
+                    ]
+                },
+                {
+                    id: "ageas",
+                    name: "Ageas",
+                    logoPath: "img/logos/ageas.svg",
+                    products: [
+                        {
+                            name: "Auto Conforto",
+                            basePremium: baseAutoPremium * 0.9,
+                            coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Proteção Jurídica"],
+                            description: "Seguro automóvel com coberturas confortáveis para o seu dia a dia."
+                        },
+                        {
+                            name: "Auto Premium",
+                            basePremium: baseAutoPremium * 1.3,
+                            coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Danos Próprios", "Quebra Isolada de Vidros", "Fenómenos da Natureza"],
+                            description: "Seguro automóvel premium com coberturas alargadas para total proteção."
+                        }
+                    ]
+                }
             ]
         };
     }
@@ -156,7 +197,8 @@ window.apiSimulation = (function() {
         const riskProfile = {
             life: calculateLifeRiskScore(clientData),
             health: calculateHealthRiskScore(clientData),
-            travel: calculateTravelRiskScore(clientData)
+            travel: calculateTravelRiskScore(clientData),
+            auto: calculateAutoRiskScore(clientData)
         };
         
         console.log("Calculated risk profile:", riskProfile);
@@ -263,10 +305,31 @@ window.apiSimulation = (function() {
         // Normalize score between 0-100
         return Math.max(0, Math.min(100, riskScore));
     }
+
+    // Calculate travel insurance risk score
+    function calculateAutoRiskScore(clientData) {
+        let riskScore = 50; // Base score
+        
+        // Age factor
+        if (clientData.age) {
+            if (clientData.age < 25) {
+                riskScore += 10; // Young travelers tend to take more risks
+            } else if (clientData.age > 65) {
+                riskScore += 15; // Elderly travelers have higher medical risks
+            }
+        }
+        
+        // Normalize score between 0-100
+        return Math.max(0, Math.min(100, riskScore));
+    }
     
     // Public API
     return {
         generateSimulatedOffers: generateSimulatedOffers,
         getClientRiskProfile: getClientRiskProfile
     };
+
+    
+    
+    
 })();

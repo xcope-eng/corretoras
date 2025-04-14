@@ -252,6 +252,46 @@ window.insuranceOfferModel = (function() {
                     }
                 ]
             }
+        ],
+        auto: [
+            {
+                id: "fidelidade",
+                name: "Fidelidade",
+                logoPath: "img/logos/fidelidade.svg",
+                products: [
+                    {
+                        name: "Automóvel Essencial",
+                        basePremium: 250,
+                        coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem"],
+                        description: "Seguro básico para automóveis com coberturas essenciais."
+                    },
+                    {
+                        name: "Automóvel Mais",
+                        basePremium: 400,
+                        coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Danos Próprios", "Quebra Isolada de Vidros"],
+                        description: "Seguro completo para automóveis com proteção adicional."
+                    }
+                ]
+            },
+            {
+                id: "ageas",
+                name: "Ageas",
+                logoPath: "img/logos/ageas.svg",
+                products: [
+                    {
+                        name: "Auto Conforto",
+                        basePremium: 300,
+                        coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Proteção Jurídica"],
+                        description: "Seguro automóvel com coberturas confortáveis para o seu dia a dia."
+                    },
+                    {
+                        name: "Auto Premium",
+                        basePremium: 450,
+                        coverages: ["Responsabilidade Civil", "Ocupantes", "Assistência em Viagem", "Danos Próprios", "Quebra Isolada de Vidros", "Fenómenos da Natureza"],
+                        description: "Seguro automóvel premium com coberturas alargadas para total proteção."
+                    }
+                ]
+            }
         ]
     };
 
@@ -300,6 +340,12 @@ window.insuranceOfferModel = (function() {
                     premium *= 1.3;
                 }
             }
+        }
+
+        // Auto specific factors
+        if (insuranceType === 'auto') {
+            // Example factor: car value (simplified)
+            premium += (clientData.carValue || 20000) / 1000 * 20;
         }
         
         // Round to 2 decimal places
@@ -352,7 +398,8 @@ window.insuranceOfferModel = (function() {
         return {
             life: generateOffersForType(clientData, 'life'),
             health: generateOffersForType(clientData, 'health'),
-            travel: generateOffersForType(clientData, 'travel')
+            travel: generateOffersForType(clientData, 'travel'),
+            auto: generateOffersForType(clientData, 'auto')
         };
     }
 
