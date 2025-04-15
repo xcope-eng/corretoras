@@ -1,111 +1,48 @@
-# Plataforma de Corretagem de Seguros
+# Modularized HTML Structure
 
-Esta plataforma permite aos corretores de seguros inserir dados de clientes uma única vez e visualizar ofertas simuladas de diferentes seguradoras para seguros de vida, saúde e viagem.
+This project is a modularized version of the original single-page application. The structure has been reorganized to use multiple HTML files with proper navigation between pages.
 
-## Estrutura do Projeto
+## Structure Overview
 
-### Arquivos HTML
-- `index.html` - Página principal da aplicação que contém toda a estrutura da interface
+- **Individual HTML Pages**: Each section is now its own complete HTML file
+  - `index.html` (Dashboard)
+  - `clients.html`
+  - `insurance.html`
+  - `auto-insurance.html`
+  - `history.html`
+  - `settings.html`
+  - `simulation.html`
 
-### Diretórios CSS
-- `css/styles.css` - Estilos principais da aplicação
-- `css/responsive.css` - Estilos específicos para responsividade em diferentes dispositivos
+- **Assets**:
+  - `/css/` - Contains all CSS files
+  - `/js/` - Contains all JavaScript files
+  - `/img/` - Contains all images
+  - `/data/` - Contains data models and API simulation
 
-### Diretórios JavaScript
-- `js/main.js` - Lógica principal da aplicação, incluindo manipulação de eventos e renderização de ofertas
-- `js/create_logos.js` - Script para gerar logotipos das seguradoras
+## Key Changes
 
-### Diretório de Dados
-- `data/client_model.js` - Modelo de dados para clientes
-- `data/insurance_offer_model.js` - Modelo de dados para ofertas de seguros
-- `data/api_simulation.js` - Simulação de chamadas de API para seguradoras
+1. **Navigation**: Converted from JavaScript-based navigation to standard HTML links
+   - All sidebar links now use `<a href="...">` to navigate between pages
+   - Active page highlighting is handled by page-specific JavaScript
 
-### Diretório de Imagens
-- `img/logos/` - Logotipos das seguradoras gerados dinamicamente
+2. **JavaScript Structure**:
+   - `main.js` - Core functionality shared across all pages
+   - `page-specific.js` - Handles page-specific functionality and active navigation highlighting
+   - Data models remain in the `/data/` directory
 
-## Descrição dos Arquivos
+3. **Shared Components**:
+   - Header, sidebar, and footer are consistent across all pages
+   - Each page loads the same CSS and JavaScript files
 
-### HTML
+## How to Use
 
-#### index.html
-Contém toda a estrutura da aplicação, incluindo:
-- Barra lateral de navegação
-- Dashboard com estatísticas
-- Formulário de entrada de dados do cliente
-- Seção de exibição de ofertas de seguros com abas para diferentes tipos
-- Templates para cartões de ofertas
+1. Open any HTML file in a web browser to start using the application
+2. Navigate between pages using the sidebar links
+3. All functionality from the original application is preserved
 
-### CSS
+## Implementation Notes
 
-#### styles.css
-Define todos os estilos visuais da aplicação:
-- Layout da barra lateral
-- Estilos de cartões e tabelas
-- Cores e tipografia
-- Estilos para formulários e botões
-- Estilos específicos para cartões de ofertas de seguros
-
-#### responsive.css
-Contém regras de mídia para garantir que a aplicação funcione bem em diferentes tamanhos de tela:
-- Ajustes para dispositivos móveis
-- Ajustes para tablets
-- Ajustes para desktops grandes
-- Correções específicas para garantir que todo o texto seja visível
-
-### JavaScript
-
-#### main.js
-Contém toda a lógica principal da aplicação:
-- Inicialização da aplicação
-- Manipulação de eventos de navegação
-- Validação de formulários
-- Geração dinâmica de ofertas de seguros
-- Filtragem e ordenação de ofertas
-- Carregamento de dados simulados
-- Gerenciamento de histórico de simulações
-
-#### create_logos.js
-Script utilitário para gerar logotipos para as seguradoras:
-- Cria SVGs coloridos para cada seguradora
-- Salva os logotipos no diretório img/logos/
-
-### Modelos de Dados
-
-#### client_model.js
-Define a estrutura de dados para clientes:
-- Propriedades do cliente (nome, idade, gênero, etc.)
-- Validação de dados
-- Funções para calcular perfil de risco
-
-#### insurance_offer_model.js
-Define a estrutura de dados para ofertas de seguros:
-- Propriedades das ofertas (seguradora, produto, prêmio, coberturas)
-- Funções para formatar valores
-- Funções para comparar e ordenar ofertas
-
-#### api_simulation.js
-Simula chamadas de API para seguradoras:
-- Funções para gerar ofertas simuladas baseadas nos dados do cliente
-- Cálculo de prêmios baseado no perfil do cliente
-- Simulação de diferentes produtos por seguradora
-- Simulação de diferentes coberturas por produto
-
-## Como Executar o Projeto
-
-1. Descompacte os arquivos em um servidor web
-2. Abra o arquivo index.html em um navegador
-3. A aplicação estará pronta para uso
-
-## Arquitetura para Integração Futura
-
-A plataforma foi projetada para permitir fácil integração com APIs reais de seguradoras no futuro:
-
-1. As chamadas simuladas em `api_simulation.js` podem ser substituídas por chamadas reais
-2. A estrutura de dados em `insurance_offer_model.js` é compatível com o que seria retornado por APIs reais
-3. O código em `main.js` está estruturado para processar respostas de API de forma assíncrona
-
-## Recursos Adicionais
-
-- A plataforma usa Bootstrap 5 para o layout básico
-- Ícones são fornecidos pelo Bootstrap Icons
-- A fonte Inter é usada para tipografia
+- Each page is a complete HTML document with proper head and body sections
+- Navigation between pages uses standard HTML links
+- JavaScript is loaded at the end of each page for optimal performance
+- Bootstrap and other dependencies are loaded from CDNs
