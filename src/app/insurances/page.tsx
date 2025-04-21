@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse';
-import styles from './clients.module.css';
+import styles from './insurances.module.css';
 
 type Policy = {
+  id: string;
+  nome: string;
   tipo_seguro: string;
   seguradora: string;
   valor: number;
@@ -12,16 +14,8 @@ type Policy = {
   estado: string;
 };
 
-type Client = {
-  id: string;
-  nome: string;
-  email: string;
-  telefone: string;
-  politicas: Policy[];
-};
-
-export default function ClientsPage() {
-  const [clients, setClients] = useState<Client[]>([]);
+export default function InsurancesPage() {
+  const [policies, setPolicies] = useState<Policy[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
@@ -35,42 +29,29 @@ export default function ClientsPage() {
           skipEmptyLines: true,
         });
 
-        const clientMap: Record<string, Client> = {};
+        const policiesList = parsed.data.map((row: any) => ({
+          id: row.id,
+          nome: row.nome,
+          tipo_seguro: row.tipo_seguro,
+          seguradora: row.seguradora,
+          valor: parseFloat(row['valor (€)']),
+          validade: row.validade,
+          estado: row.estado,
+        }));
 
-        parsed.data.forEach((row: any) => {
-          const id = row.id;
-          if (!clientMap[id]) {
-            clientMap[id] = {
-              id,
-              nome: row.nome,
-              email: row.email,
-              telefone: row.telefone,
-              politicas: [],
-            };
-          }
-
-          clientMap[id].politicas.push({
-            tipo_seguro: row.tipo_seguro,
-            seguradora: row.seguradora,
-            valor: parseFloat(row['valor (€)']),
-            validade: row.validade,
-            estado: row.estado,
-          });
-        });
-
-        setClients(Object.values(clientMap));
+        setPolicies(policiesList);
       });
   }, []);
 
-  const filteredClients = clients.filter(client => {
-    const matchesSearch = client.nome.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         client.id.includes(searchTerm);
+  const filteredPolicies = policies.filter(policy => {
+    const matchesSearch = policy.nome.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         policy.id.includes(searchTerm);
     
     const matchesStatus = statusFilter === 'all' || 
-                         client.politicas[0].estado === statusFilter;
+                         policy.estado === statusFilter;
     
     const matchesType = typeFilter === 'all' || 
-                       client.politicas.some(p => p.tipo_seguro === typeFilter);
+                       policy.tipo_seguro === typeFilter;
 
     return matchesSearch && matchesStatus && matchesType;
   });
@@ -78,10 +59,10 @@ export default function ClientsPage() {
   return (
     <div className={styles.contentSection}>
       <div className={styles.contentHeader}>
-        <h2>Clientes</h2>
+        <h2>Seguros</h2>
         <div className={styles.headerActions}>
           <button className="btn btn-primary flex items-center gap-2">
-            <i className="bi bi-plus-circle"></i> Novo Cliente
+            <i className="bi bi-plus-circle"></i> Nova Apólice
           </button>
           <button className="btn btn-outline-primary flex items-center gap-2">
             <i className="bi bi-download"></i> Exportar
@@ -97,7 +78,7 @@ export default function ClientsPage() {
                 <div className={styles.inputGroup}>
                   <input 
                     type="text" 
-                    id="client-search" 
+                    id="policy-search" 
                     className={styles.formControl} 
                     placeholder="Pesquisar por nome ou NIF..."
                     value={searchTerm}
@@ -114,7 +95,7 @@ export default function ClientsPage() {
                 <div className={styles.filterContainer}>
                   <select 
                     className={styles.formSelect} 
-                    id="client-status-filter"
+                    id="policy-status-filter"
                     value={statusFilter}
                     onChange={(e) => setStatusFilter(e.target.value)}
                   >
@@ -126,7 +107,7 @@ export default function ClientsPage() {
                 <div className={styles.filterContainer}>
                   <select 
                     className={styles.formSelect} 
-                    id="client-type-filter"
+                    id="policy-type-filter"
                     value={typeFilter}
                     onChange={(e) => setTypeFilter(e.target.value)}
                   >
@@ -149,28 +130,28 @@ export default function ClientsPage() {
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th className="text-sm font-semibold text-gray-600">Cliente</th>
-                  <th className="text-sm font-semibold text-gray-600">NIF</th>
-                  <th className="text-sm font-semibold text-gray-600">Contacto</th>
-                  <th className="text-sm font-semibold text-gray-600">Idade</th>
-                  <th className="text-sm font-semibold text-gray-600">Ocupação</th>
-                  <th className="text-sm font-semibold text-gray-600">Apólices</th>
-                  <th className="text-sm font-semibold text-gray-600">Estado</th>
-                  <th className="text-sm font-semibold text-gray-600">Ações</th>
+                  <th>Cliente</th>
+                  <th>Tipo</th>
+                  <th>Seguradora</th>
+                  <th>Produto</th>
+                  <th>Prémio</th>
+                  <th>Validade</th>
+                  <th>Estado</th>
+                  <th>Ações</th>
                 </tr>
               </thead>
               <tbody>
-                {filteredClients.map((client) => (
-                  <tr key={client.id}>
-                    <td>{client.nome}</td>
-                    <td>{client.id}</td>
-                    <td>{client.telefone}</td>
+                {filteredPolicies.map((policy, index) => (
+                  <tr key={`${policy.id}-${index}`}>
+                    <td>{policy.nome}</td>
+                    <td>{policy.tipo_seguro}</td>
+                    <td>{policy.seguradora}</td>
                     <td>-</td>
-                    <td>-</td>
-                    <td>{client.politicas.length}</td>
+                    <td>{policy.valor}€</td>
+                    <td>{policy.validade}</td>
                     <td>
-                      <span className={`${styles.statusBadge} ${client.politicas[0].estado === 'ativo' ? styles.statusActive : styles.statusInactive}`}>
-                        {client.politicas[0].estado === 'ativo' ? 'Ativo' : 'Inativo'}
+                      <span className={`${styles.statusBadge} ${policy.estado === 'ativo' ? styles.statusActive : styles.statusInactive}`}>
+                        {policy.estado === 'ativo' ? 'Ativo' : 'Inativo'}
                       </span>
                     </td>
                     <td>

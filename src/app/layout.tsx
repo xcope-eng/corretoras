@@ -1,20 +1,20 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
-
+// Server-side only
 export const metadata: Metadata = {
   title: "Xcope - Corretora de Seguros",
   description: "Plataforma de gestão de seguros",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const inter = Inter({ subsets: ["latin"] });
+
+// 👇 Move the client-specific logic into a wrapper
+import RootLayoutClient from "./RootLayoutClient";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt">
       <head>
@@ -24,10 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div className="flex">
-          <Sidebar />
-          {children}
-        </div>
+        <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>
   );

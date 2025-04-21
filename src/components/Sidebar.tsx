@@ -51,8 +51,8 @@ export default function Sidebar() {
           </li>
           <li>
             <Link 
-              href="/insurance" 
-              className={`${styles.navLink} ${isActive('/insurance') ? styles.active : ''}`}
+              href="/insurances" 
+              className={`${styles.navLink} ${isActive('/insurances') ? styles.active : ''}`}
               prefetch={true}
             >
               <i className="bi bi-shield"></i>

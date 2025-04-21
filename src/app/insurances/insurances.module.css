@@ -13,16 +13,16 @@
 }
 
 .contentHeader h2 {
-    font-weight: 600;
-    margin: 0;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    max-width: 100%;
-    display: block;
-    font-size: 1.75rem;
-    color: var(--text-dark);
-  }
+  font-weight: 600;
+  margin: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: 100%;
+  display: block;
+  font-size: 1.75rem;
+  color: var(--text-dark);
+}
 
 .headerActions {
   display: flex;
@@ -119,41 +119,41 @@
 }
 
 /* Column widths */
-.table th:nth-child(1), /* ID */
+.table th:nth-child(1), /* Cliente */
 .table td:nth-child(1) {
-  width: 8%;
-  min-width: 80px;
-}
-
-.table th:nth-child(2), /* Cliente */
-.table td:nth-child(2) {
-  width: 15%;
+  width: 20%;
   min-width: 150px;
 }
 
-.table th:nth-child(3), /* Data */
-.table td:nth-child(3) {
-  width: 12%;
-  min-width: 100px;
+.table th:nth-child(2), /* Tipo */
+.table td:nth-child(2) {
+  width: 15%;
+  min-width: 120px;
 }
 
-.table th:nth-child(4), /* Tipo de Seguro */
+.table th:nth-child(3), /* Seguradora */
+.table td:nth-child(3) {
+  width: 15%;
+  min-width: 120px;
+}
+
+.table th:nth-child(4), /* Produto */
 .table td:nth-child(4) {
   width: 15%;
   min-width: 120px;
 }
 
-.table th:nth-child(5), /* Melhor Oferta */
+.table th:nth-child(5), /* Prémio */
 .table td:nth-child(5) {
-  width: 15%;
-  min-width: 120px;
-}
-
-.table th:nth-child(6), /* Prémio */
-.table td:nth-child(6) {
   width: 12%;
   min-width: 100px;
   text-align: right;
+}
+
+.table th:nth-child(6), /* Validade */
+.table td:nth-child(6) {
+  width: 12%;
+  min-width: 100px;
 }
 
 .table th:nth-child(7), /* Estado */
@@ -166,7 +166,7 @@
 .table th:nth-child(8), /* Ações */
 .table td:nth-child(8) {
   width: 8%;
-  min-width: 80px;
+  min-width: 100px;
   text-align: center;
 }
 
@@ -230,4 +230,4 @@
     margin-left: 2.5rem;
     padding: 1.5rem 2.5rem;
   }
-}
+} 

@@ -7,11 +7,11 @@ export default function Dashboard() {
         <div className={styles.contentHeader}>
           <h2>Simulação de Seguros</h2>
           <div className={styles.headerActions}>
-            <button className={`${styles.btn} ${styles.btnPrimary}`}>
+            <button className="btn btn-primary">
               <i className="bi bi-plus-circle"></i>
               Nova Simulação
             </button>
-            <button className={`${styles.btn} ${styles.btnOutline}`}>
+            <button className="btn btn-outline-primary">
               <i className="bi bi-download"></i>
               Exportar
             </button>
@@ -200,7 +200,7 @@ export default function Dashboard() {
           <div className={styles.cardBody}>
             <div className="flex justify-between items-center mb-4">
               <h5 className={styles.cardTitle}>Simulações Recentes</h5>
-              <button className={`${styles.btn} ${styles.btnOutline}`}>
+              <button className="btn btn-outline-primary">
                 Ver Todas
               </button>
             </div>
@@ -224,7 +224,7 @@ export default function Dashboard() {
                     <td>Fidelidade Vida Mais</td>
                     <td>45.75 €/mês</td>
                     <td>
-                      <button className={`${styles.btn} ${styles.btnOutline}`}>
+                      <button className="btn btn-outline-primary">
                         Ver
                       </button>
                     </td>
@@ -236,7 +236,7 @@ export default function Dashboard() {
                     <td>Ageas Médis Premium</td>
                     <td>78.50 €/mês</td>
                     <td>
-                      <button className={`${styles.btn} ${styles.btnOutline}`}>
+                      <button className="btn btn-outline-primary">
                         Ver
                       </button>
                     </td>
@@ -248,7 +248,7 @@ export default function Dashboard() {
                     <td>Allianz Global Travel</td>
                     <td>32.25 €/mês</td>
                     <td>
-                      <button className={`${styles.btn} ${styles.btnOutline}`}>
+                      <button className="btn btn-outline-primary">
                         Ver
                       </button>
                     </td>
