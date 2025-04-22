@@ -20,7 +20,7 @@
             <div class="col-md-3 col-lg-2 sidebar">
                 <div class="sidebar-header">
                     <div class="logo">
-                        <img src="./img/logos/logoacpvb.png" alt="Logo" style="height: 100%; width: auto;">
+                        <img src="./img/logos/xcopefinal.png" alt="Logo" style="max-width: 150px; width: 100%; object-fit: contain;">
                     </div>
                 </div>
                 
@@ -746,7 +746,7 @@
                 <div id="insurance-offers-section" class="content-section" style="display: none;">
                     <div class="content-header">
                         <div>
-                            <h2>Ofertas de Seguros</h2>
+                            <h2>Ofertas Disponíveis</h2>
                             <p id="client-name-display">Cliente: <span>João Pereira</span></p>
                         </div>
                         <div class="header-actions">
@@ -764,60 +764,11 @@
                     
                     <div class="card">
                         <div class="card-body">
-                            <!-- Insurance Tabs -->
-                            <ul class="nav nav-tabs" id="insurance-tabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="life-tab" data-bs-toggle="tab" data-bs-target="#life-tab-pane" type="button" role="tab" aria-controls="life-tab-pane" aria-selected="true">
-                                        <i class="bi bi-heart"></i> Seguro de Vida
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="health-tab" data-bs-toggle="tab" data-bs-target="#health-tab-pane" type="button" role="tab" aria-controls="health-tab-pane" aria-selected="false">
-                                        <i class="bi bi-hospital"></i> Seguro de Saúde
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="travel-tab" data-bs-toggle="tab" data-bs-target="#travel-tab-pane" type="button" role="tab" aria-controls="travel-tab-pane" aria-selected="false">
-                                        <i class="bi bi-airplane"></i> Seguro de Viagem
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="auto-tab" data-bs-toggle="tab" data-bs-target="#auto-tab-pane" type="button" role="tab" aria-controls="auto-tab-pane" aria-selected="false">
-                                        <i class="bi bi-car-front"></i> Seguro Automóvel
-                                    </button>
-                                </li>
-                            </ul>
-                            
-                            <!-- Tab Content -->
-                            <div class="tab-content" id="insurance-tabs-content">
-                                <!-- Life Insurance Tab -->
-                                <div class="tab-pane fade show active" id="life-tab-pane" role="tabpanel" aria-labelledby="life-tab" tabindex="0">
-                                    <div class="row mt-4" id="life-offers-container">
-                                        <!-- Life insurance offers will be added here dynamically -->
-                                    </div>
-                                </div>
-                                
-                                <!-- Health Insurance Tab -->
-                                <div class="tab-pane fade" id="health-tab-pane" role="tabpanel" aria-labelledby="health-tab" tabindex="0">
-                                    <div class="row mt-4" id="health-offers-container">
-                                        <!-- Health insurance offers will be added here dynamically -->
-                                    </div>
-                                </div>
-                                
-                                <!-- Travel Insurance Tab -->
-                                <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel" aria-labelledby="travel-tab" tabindex="0">
-                                    <div class="row mt-4" id="travel-offers-container">
-                                        <!-- Travel insurance offers will be added here dynamically -->
-                                    </div>
-                                </div>
-
-                                <!-- Auto Insurance Tab -->
-                                <div class="tab-pane fade" id="auto-tab-pane" role="tabpanel" aria-labelledby="auto-tab" tabindex="0">
-                                    <div class="row mt-4" id="auto-offers-container">
-                                        <!-- Auto insurance offers will be added here dynamically -->
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- Offer Containers -->
+                            <div class="row" id="life-offers-container" style="display: none;"></div>
+                            <div class="row" id="health-offers-container" style="display: none;"></div>
+                            <div class="row" id="travel-offers-container" style="display: none;"></div>
+                            <div class="row" id="auto-offers-container" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -879,6 +830,59 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Type Selection Section -->
+                <div id="insurance-type-selection" class="content-section" style="display: none;">
+                    <div class="content-header">
+                        <h2>Escolha o Tipo de Seguro</h2>
+                    </div>
+                    
+                    <div class="row insurance-types-grid mt-4">
+                        <div class="col-md-3 mb-4">
+                            <div class="insurance-type-card" data-insurance-type="travel">
+                                <div class="icon-container">
+                                    <i class="bi bi-airplane"></i>
+                                </div>
+                                <div class="type-info">
+                                    <h3>Seguro Viagem</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4">
+                            <div class="insurance-type-card" data-insurance-type="life">
+                                <div class="icon-container">
+                                    <i class="bi bi-heart"></i>
+                                </div>
+                                <div class="type-info">
+                                    <h3>Seguro Vida</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4">
+                            <div class="insurance-type-card" data-insurance-type="auto">
+                                <div class="icon-container">
+                                    <i class="bi bi-car-front"></i>
+                                </div>
+                                <div class="type-info">
+                                    <h3>Seguro<br>Automóvel</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4">
+                            <div class="insurance-type-card" data-insurance-type="health">
+                                <div class="icon-container">
+                                    <i class="bi bi-hospital"></i>
+                                </div>
+                                <div class="type-info">
+                                    <h3>Seguro Saúde</h3>
+                                </div>
                             </div>
                         </div>
                     </div>

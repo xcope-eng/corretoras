@@ -582,3 +582,61 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, textarea, label, li {
 .filter-container .form-select {
     border-radius: 0.5rem;
 }
+
+/* Insurance Type Selection */
+.insurance-types-grid {
+    padding: 2rem;
+}
+
+.insurance-type-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    border: 2px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.insurance-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #4f46e5;
+}
+
+.insurance-type-card .icon-container {
+    background: #f3f4f6;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.insurance-type-card .icon-container i {
+    font-size: 2rem;
+    color: #4f46e5;
+}
+
+.insurance-type-card .type-info h3 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin: 0;
+    font-weight: 600;
+}
+
+.insurance-type-card:hover .icon-container {
+    background: #4f46e5;
+}
+
+.insurance-type-card:hover .icon-container i {
+    color: #ffffff;
+}

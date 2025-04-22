@@ -9,6 +9,63 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load dashboard data
     loadDashboardData();
+
+    // Get elements
+    const newSimulationBtn = document.getElementById('new-simulation-btn');
+    const insuranceTypeSelection = document.getElementById('insurance-type-selection');
+    const clientFormSection = document.getElementById('client-form-section');
+    const insuranceTypeCards = document.querySelectorAll('.insurance-type-card');
+    
+    // Handle new simulation button click
+    newSimulationBtn.addEventListener('click', function() {
+        // Hide all sections first
+        document.getElementById('dashboard-view').style.display = 'none';
+        document.getElementById('client-form-section').style.display = 'none';
+        document.getElementById('insurance-offers-section').style.display = 'none';
+        // Show insurance type selection
+        insuranceTypeSelection.style.display = 'block';
+    });
+    
+    // Handle insurance type selection
+    insuranceTypeCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const insuranceType = this.dataset.insuranceType;
+            // Hide insurance type selection
+            insuranceTypeSelection.style.display = 'none';
+            // Show client form
+            clientFormSection.style.display = 'block';
+            // Store selected insurance type
+            sessionStorage.setItem('selectedInsuranceType', insuranceType);
+            // Customize form based on selection
+            customizeFormForInsuranceType(insuranceType);
+        });
+    });
+
+    // Function to customize form based on insurance type
+    function customizeFormForInsuranceType(insuranceType) {
+        // Hide all specific sections first
+        document.querySelectorAll('.insurance-specific-fields').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show relevant fields based on insurance type
+        switch(insuranceType) {
+            case 'travel':
+                document.querySelectorAll('.travel-info').forEach(field => {
+                    field.style.display = 'block';
+                });
+                break;
+            case 'auto':
+                document.querySelectorAll('.vehicle-info').forEach(field => {
+                    field.style.display = 'block';
+                });
+                break;
+            case 'health':
+            case 'life':
+                // Show relevant fields for health and life insurance
+                break;
+        }
+    }
 });
 
 // Initialize the application
@@ -72,10 +129,87 @@ function setupEventListeners() {
     });
     
     // View offers button - CRITICAL FUNCTIONALITY
-    document.getElementById('view-offers-btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        console.log("View Offers button clicked");
-        handleClientFormSubmission();
+    document.getElementById('view-offers-btn').addEventListener('click', function() {
+        // Get the selected insurance type
+        const selectedType = sessionStorage.getItem('selectedInsuranceType');
+        
+        // Hide client form
+        document.getElementById('client-form-section').style.display = 'none';
+        
+        // Show offers section
+        const offersSection = document.getElementById('insurance-offers-section');
+        offersSection.style.display = 'block';
+
+        // Get client data
+        const clientData = {
+            name: document.getElementById('name').value || "Cliente Teste",
+            age: parseInt(document.getElementById('age').value || "35"),
+            gender: document.getElementById('gender').value || "male",
+            housingType: document.getElementById('housing-type').value || "owned",
+            maritalStatus: document.getElementById('marital-status').value || "married",
+            children: parseInt(document.getElementById('children').value || "0"),
+            occupation: document.getElementById('occupation').value || "Engenheiro",
+            income: parseInt(document.getElementById('income').value || "45000"),
+            travelPlanned: document.getElementById('travel-planned').checked,
+            destination: document.getElementById('destination')?.value || "",
+            duration: parseInt(document.getElementById('duration')?.value || "0"),
+            // Add vehicle data
+            vehicle: {
+                licensePlate: document.getElementById('license-plate').value || "",
+                brand: document.getElementById('car-brand').value || "",
+                model: document.getElementById('car-model').value || "",
+                year: parseInt(document.getElementById('car-year').value || "2024")
+            }
+        };
+
+        // Generate offers
+        const riskProfile = window.apiSimulation.getClientRiskProfile(clientData);
+        const offers = window.apiSimulation.generateSimulatedOffers(clientData, riskProfile);
+
+        // Clear all offer containers first
+        clearOfferContainers();
+
+        // Show only the relevant container and its offers
+        let containerId;
+        switch(selectedType) {
+            case 'travel':
+                containerId = 'travel-offers-container';
+                break;
+            case 'life':
+                containerId = 'life-offers-container';
+                break;
+            case 'auto':
+                containerId = 'auto-offers-container';
+                break;
+            case 'health':
+                containerId = 'health-offers-container';
+                break;
+        }
+
+        if (containerId) {
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.style.display = 'flex';
+                // Display offers for the selected type
+                const relevantOffers = offers[selectedType] || [];
+                relevantOffers.forEach(offer => {
+                    const offerElement = createOfferElement(document.getElementById('insurance-offer-template'), offer);
+                    container.appendChild(offerElement);
+                });
+            }
+        }
+
+        // Update the header to show which type of insurance was selected
+        const headerTitle = document.querySelector('#insurance-offers-section .content-header h2');
+        if (headerTitle) {
+            const insuranceTypeText = {
+                'travel': 'Viagem',
+                'life': 'Vida',
+                'auto': 'Automóvel',
+                'health': 'Saúde'
+            };
+            headerTitle.textContent = `Ofertas de Seguro ${insuranceTypeText[selectedType] || ''}`;
+        }
     });
     
     // Travel checkbox
