@@ -57,10 +57,10 @@ export default function InsurancesPage() {
   });
 
   return (
-    <div className={styles.contentSection}>
-      <div className={styles.contentHeader}>
+    <div className="page-content">
+      <div className="page-header">
         <h2>Seguros</h2>
-        <div className={styles.headerActions}>
+        <div className="header-actions">
           <button className="btn btn-primary flex items-center gap-2">
             <i className="bi bi-plus-circle"></i> Nova Apólice
           </button>
@@ -115,7 +115,7 @@ export default function InsurancesPage() {
                     <option value="Vida">Vida</option>
                     <option value="Saúde">Saúde</option>
                     <option value="Automóvel">Automóvel</option>
-                    <option value="viagem">Viagem</option>
+                    <option value="Viagem">Viagem</option>
                   </select>
                 </div>
               </div>

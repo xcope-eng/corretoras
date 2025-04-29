@@ -151,7 +151,6 @@
 }
 
 .table th {
-  background-color: var(--background-light);
   padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 700;

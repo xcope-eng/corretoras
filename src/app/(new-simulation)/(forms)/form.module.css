@@ -1,0 +1,146 @@
+.card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.sectionTitle h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+  
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem 2rem;
+}
+  
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+  
+.formGroup label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+  
+.formGroup input,
+.formGroup select {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    background-color: white;
+}
+  
+.formCheckInput {
+    margin-right: 0.5rem;
+}
+  
+.formCheckLabel {
+    font-weight: 500;
+}
+  
+
+/* Insurance Offers Styles */
+.offerCard {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color);
+}
+
+.offerCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.offerCard .card-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.companyInfo {
+    display: flex;
+    align-items: center;
+}
+
+.companyLogo {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+}
+
+.companyName {
+    font-weight: 500;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+}
+
+.productName {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.productDescription {
+    color: var(--text-medium);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.premiumContainer {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.premiumValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.premiumPeriod {
+    font-size: 0.875rem;
+}
+
+.coverages {
+    margin-bottom: 1rem;
+}
+
+.coverages h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.coveragesList {
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.coveragesList li {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.offerCard .cardFooter {
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+}

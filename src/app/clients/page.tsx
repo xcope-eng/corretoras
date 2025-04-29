@@ -76,7 +76,7 @@ export default function ClientsPage() {
   });
 
   return (
-    <div className={styles.contentSection}>
+    <div className="page-content">
       <div className={styles.contentHeader}>
         <h2>Clientes</h2>
         <div className={styles.headerActions}>
@@ -134,7 +134,7 @@ export default function ClientsPage() {
                     <option value="Vida">Vida</option>
                     <option value="Saúde">Saúde</option>
                     <option value="Automóvel">Automóvel</option>
-                    <option value="viagem">Viagem</option>
+                    <option value="Viagem">Viagem</option>
                   </select>
                 </div>
               </div>

@@ -113,7 +113,7 @@ export default function HistoryPage() {
                     <option value="Vida">Vida</option>
                     <option value="Saúde">Saúde</option>
                     <option value="Automóvel">Automóvel</option>
-                    <option value="viagem">Viagem</option>
+                    <option value="Viagem">Viagem</option>
                   </select>
                 </div>
               </div>

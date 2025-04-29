@@ -34,14 +34,49 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Standardized Page Layout */
+.page-content {
+  margin-left: 2rem;
+  padding: 0rem 2rem;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-light);
+}
 
-/* Ensure all text in buttons is fully visible */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  font-weight: 600;
+  margin: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: 100%;
+  display: block;
+  font-size: 1.75rem;
+  color: var(--text-dark);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+
+
+
+
+/* Button Styles */
 .btn {
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
-}
-.btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -70,4 +105,16 @@ body {
 
 .btn-outline-primary:hover {
   background-color: var(--primary-light);
+}
+
+/* Make sure all text is fully visible */
+h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, textarea, label, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
