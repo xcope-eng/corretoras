@@ -3,18 +3,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Server-side only
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Xcope - Corretora de Seguros",
+  title: "Xcope",
   description: "Plataforma de gestão de seguros",
 };
 
-const inter = Inter({ subsets: ["latin"] });
-
-// 👇 Move the client-specific logic into a wrapper
-import RootLayoutClient from "./RootLayoutClient";
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt">
       <head>
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={inter.className}>
-        <RootLayoutClient>{children}</RootLayoutClient>
+        {children}
       </body>
     </html>
   );

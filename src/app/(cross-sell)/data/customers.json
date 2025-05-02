@@ -1,0 +1,3441 @@
+[
+    {
+        "id": 1,
+        "nome_completo": "Ricardo Freitas",
+        "idade": 66,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-06-09",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-09-01",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "8040-056",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 47
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nome_completo": "Emma Barros",
+        "idade": 48,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Automóvel",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-02-21",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2024-03-11",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "9973-174",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 53
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nome_completo": "Constança Carvalho",
+        "idade": 31,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-04-17",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "3202-365",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Cobertura de saúde complementar ao seguro de vida.",
+                "probabilidade_conversao": 60
+            },
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 35
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nome_completo": "Luca Vicente",
+        "idade": 52,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-08-27",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-02-06",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-07-17",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "2412-822",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 5,
+        "nome_completo": "Xavier Simões",
+        "idade": 51,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel",
+            "Viagens",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-05-05",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-04-25",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-12-12",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "7726-620",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 74
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nome_completo": "Joaquim Almeida",
+        "idade": 40,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-08-21",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "3102-125",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 75
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nome_completo": "Mara Barros",
+        "idade": 36,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Viagens",
+            "Vida",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-05-30",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-10-16",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-09-21",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "5445-990",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 80
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "nome_completo": "Marta Oliveira",
+        "idade": 43,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2023-02-05",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "2019-242",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 46
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Seguro de vida como complemento à cobertura de saúde.",
+                "probabilidade_conversao": 58
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nome_completo": "Gonçalo Loureiro",
+        "idade": 63,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Vida",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2024-03-19",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-05-10",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "2914-550",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 56
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "nome_completo": "Diana Rodrigues",
+        "idade": 44,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2023-02-16",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "2961-619",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Seguro de vida como complemento à cobertura de saúde.",
+                "probabilidade_conversao": 52
+            },
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 60
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "nome_completo": "Salomé Ferreira",
+        "idade": 60,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Vida",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-04-21",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-08-26",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "8887-209",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 12,
+        "nome_completo": "Gil Neto",
+        "idade": 65,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-07-08",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6525-624",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 53
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 42
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "nome_completo": "Gonçalo Andrade",
+        "idade": 69,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Automóvel",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-11-16",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-02-12",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "5423-734",
+        "ocupacao": "Funcionário/a Administrativo",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 59
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 60
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "nome_completo": "Margarida Branco",
+        "idade": 43,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-08-16",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "5434-686",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 43
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 47
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "nome_completo": "João Araújo",
+        "idade": 58,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-09-21",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "7989-211",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 55
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 64
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "nome_completo": "Emma Neto",
+        "idade": 42,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-12-23",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "6137-086",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 52
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "nome_completo": "Patrícia Simões",
+        "idade": 55,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Viagens",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-04-19",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-07-04",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "3668-102",
+        "ocupacao": "Comerciante",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 51
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 55
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "nome_completo": "Amélia Guerreiro",
+        "idade": 64,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-06-08",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "7812-405",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 46
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "nome_completo": "Mário Pacheco",
+        "idade": 54,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-11-11",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-02-04",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "9852-780",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 57
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "nome_completo": "Ivo Pinho",
+        "idade": 44,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-05-15",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-01-28",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "3949-433",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 44
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "nome_completo": "Patrícia Valente",
+        "idade": 30,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Saúde",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2023-03-22",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-10-28",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "9930-885",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 22,
+        "nome_completo": "Álvaro Esteves",
+        "idade": 59,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-10-08",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-09-05",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "9593-849",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 49
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "nome_completo": "Ariana Marques",
+        "idade": 69,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Saúde",
+            "Automóvel",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-09-26",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-10-26",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-10-31",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "4327-325",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 62
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 64
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "nome_completo": "Luna Garcia",
+        "idade": 59,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-05-19",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-06-11",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-04-04",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "5170-960",
+        "ocupacao": "Contabilista",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 25,
+        "nome_completo": "Mariana Soares",
+        "idade": 46,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-09-10",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "2118-537",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 34
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "nome_completo": "Eduardo Rocha",
+        "idade": 40,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-04-27",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-12-07",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "1417-887",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 58
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "nome_completo": "Maria Vicente",
+        "idade": 50,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-10-16",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-06-05",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-08-10",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "0325-574",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 67
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 54
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "nome_completo": "Rafaela Leal",
+        "idade": 28,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Automóvel",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-09-26",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-04-01",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "5983-115",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 77
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 51
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "nome_completo": "Joaquim Moreira",
+        "idade": 57,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-06-20",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-08-19",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-03-29",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "4222-426",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 30
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 64
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "nome_completo": "Duarte Machado",
+        "idade": 45,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Automóvel",
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-09-19",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-10-10",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-09-28",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "1221-337",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 46
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "nome_completo": "Andreia Costa",
+        "idade": 67,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Casa",
+            "Automóvel",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-11-11",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-05-09",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-08-22",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "9119-106",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 65
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 54
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "nome_completo": "Constança Batista",
+        "idade": 39,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-02-14",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "6603-543",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 33,
+        "nome_completo": "Flor Lopes",
+        "idade": 56,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Saúde",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-10-11",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-09-12",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "7503-794",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 34,
+        "nome_completo": "Maria Gomes",
+        "idade": 41,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Viagens",
+            "Automóvel",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-01-15",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-07-02",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-11-22",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "8715-103",
+        "ocupacao": "Consultor/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 48
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 77
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "nome_completo": "Carminho Pinheiro",
+        "idade": 63,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Saúde",
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-06-18",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-05-29",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-04-03",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "7661-935",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 36,
+        "nome_completo": "Beatriz Teixeira",
+        "idade": 38,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Casa",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-05-02",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2022-07-21",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "5340-536",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 48
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "nome_completo": "Ana Soares",
+        "idade": 61,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-10-01",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-08-27",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "0717-862",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 69
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "nome_completo": "Andreia Cunha",
+        "idade": 56,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-08-22",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "4232-007",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 49
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "nome_completo": "Márcio Vicente",
+        "idade": 37,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-05-02",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-04-24",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "2559-588",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 40,
+        "nome_completo": "Gabriel Nascimento",
+        "idade": 42,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-02-02",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-07-30",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "4371-873",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 49
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "nome_completo": "Kévim Freitas",
+        "idade": 43,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Vida",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2024-04-26",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-06-22",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "3484-530",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 42,
+        "nome_completo": "Isaac Correia",
+        "idade": 41,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-12-06",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-06-06",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-04-25",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "0480-859",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 57
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 37
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "nome_completo": "Salomé Carneiro",
+        "idade": 47,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Saúde",
+            "Casa",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-10-13",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2024-02-07",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2024-04-26",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "0996-688",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 47
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "nome_completo": "Matias Antunes",
+        "idade": 33,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-07-15",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "6569-878",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Cobertura de saúde complementar ao seguro de vida.",
+                "probabilidade_conversao": 68
+            },
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 47
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "nome_completo": "Gil Teixeira",
+        "idade": 49,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-09-27",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "8740-880",
+        "ocupacao": "Consultor/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 74
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 66
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "nome_completo": "Ângela Miranda",
+        "idade": 49,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Casa",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-08-08",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-09-29",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-11-09",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "8480-471",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 34
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "nome_completo": "Andreia Campos",
+        "idade": 66,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-06-21",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6115-116",
+        "ocupacao": "Funcionário/a Administrativo",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 31
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Cobertura de saúde complementar ao seguro de vida.",
+                "probabilidade_conversao": 62
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "nome_completo": "Frederico Coelho",
+        "idade": 44,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-01-30",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "1864-504",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 30
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Seguro de vida como complemento à cobertura de saúde.",
+                "probabilidade_conversao": 48
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "nome_completo": "Gustavo Melo",
+        "idade": 51,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-05-27",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "1403-246",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 56
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 68
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "nome_completo": "Maria Mendes",
+        "idade": 45,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-09-13",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2022-07-22",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "4565-734",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 45
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "nome_completo": "Renato Macedo",
+        "idade": 25,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Casa",
+            "Vida",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-08-02",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-09-07",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-06-29",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "5057-867",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 50
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "nome_completo": "André Baptista",
+        "idade": 48,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-07-09",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "8089-690",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 26
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Seguro de vida como complemento à cobertura de saúde.",
+                "probabilidade_conversao": 46
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "nome_completo": "Kelly Matos",
+        "idade": 37,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-05-28",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "9499-981",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 54,
+        "nome_completo": "Renata Faria",
+        "idade": 67,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-05-30",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-06-14",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-05-08",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1679-749",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 55,
+        "nome_completo": "José Vicente",
+        "idade": 48,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Automóvel",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-03-10",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2022-05-02",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "6276-036",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 70
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "nome_completo": "Álvaro Cruz",
+        "idade": 67,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-10-27",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "9768-739",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 62
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 68
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "nome_completo": "Caetana Guerreiro",
+        "idade": 33,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Saúde",
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-08-10",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-11-01",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2022-02-01",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "3771-023",
+        "ocupacao": "Consultor/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 58,
+        "nome_completo": "Camila Melo",
+        "idade": 37,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-12-12",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-02-17",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-09-30",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "3673-438",
+        "ocupacao": "Contabilista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 59,
+        "nome_completo": "Emanuel Mendes",
+        "idade": 35,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-08-02",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-02-12",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "8912-560",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 60,
+        "nome_completo": "Ivan Silva",
+        "idade": 69,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-07-20",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-09-05",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6156-690",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 61,
+        "nome_completo": "Marcos Cunha",
+        "idade": 62,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Viagens",
+            "Automóvel",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2022-01-19",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-01-08",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-11-15",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "4760-881",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 42
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "nome_completo": "Leandro Moura",
+        "idade": 54,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-08-31",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "2685-681",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Cobertura de saúde complementar ao seguro de vida.",
+                "probabilidade_conversao": 59
+            },
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 59
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "nome_completo": "Anita Loureiro",
+        "idade": 50,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-07-05",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-01-17",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-06-07",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "8907-311",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 64,
+        "nome_completo": "Patrícia Matos",
+        "idade": 43,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Saúde",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2024-01-08",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2023-12-25",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-04-19",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "3377-385",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 65,
+        "nome_completo": "Leandro Soares",
+        "idade": 36,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Viagens",
+            "Casa",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-02-08",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-01-20",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-04-04",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "3463-011",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 50
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 68
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "nome_completo": "Núria Ramos",
+        "idade": 47,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Casa",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-09-16",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-01-01",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "9385-126",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 42
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 30
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "nome_completo": "Luca Rodrigues",
+        "idade": 41,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-02-14",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-02-26",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-01-05",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1513-816",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 68
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "nome_completo": "Francisco Gonçalves",
+        "idade": 25,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Casa",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-06-10",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-01-24",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-11-25",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "2716-624",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 69,
+        "nome_completo": "Carminho Pacheco",
+        "idade": 29,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-04-07",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-01-08",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1089-094",
+        "ocupacao": "Comerciante",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 70,
+        "nome_completo": "Núria Branco",
+        "idade": 59,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa",
+            "Vida",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-12-06",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-03-05",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-07-29",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "4570-788",
+        "ocupacao": "Funcionário/a Administrativo",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 64
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "nome_completo": "Francisco Rodrigues",
+        "idade": 45,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-09-11",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "2222-745",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 72,
+        "nome_completo": "Duarte Machado",
+        "idade": 56,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Automóvel",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-02-13",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-05-15",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1633-365",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 54
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 52
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "nome_completo": "Dinis Neves",
+        "idade": 42,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Viagens",
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-01-21",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-11-14",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-12-01",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1272-443",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 40
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "nome_completo": "Joana Leal",
+        "idade": 45,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-06-02",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-06-24",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-08-17",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "7183-147",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 59
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "nome_completo": "Benedita Assunção",
+        "idade": 32,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Viagens",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-12-27",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-06-22",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "2857-673",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 37
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 77
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "nome_completo": "Kévim Azevedo",
+        "idade": 28,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-07-27",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "3083-056",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 54
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 72
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "nome_completo": "Gabriela Cardoso",
+        "idade": 40,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-02-12",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "5126-147",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 26
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Seguro de vida como complemento à cobertura de saúde.",
+                "probabilidade_conversao": 54
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "nome_completo": "Sofia Oliveira",
+        "idade": 28,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Vida",
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2024-01-08",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-11-29",
+                "renovacoes": 2
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-05-19",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6564-240",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 79,
+        "nome_completo": "Cristiano Batista",
+        "idade": 63,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Casa",
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-12-30",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2021-05-16",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-11-09",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "0135-138",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 71
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "nome_completo": "José Alves",
+        "idade": 54,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2022-12-19",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "5867-323",
+        "ocupacao": "Gestor/a de Projeto",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 75
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "nome_completo": "Sofia Andrade",
+        "idade": 58,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Saúde",
+            "Casa",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-11-28",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2024-03-09",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-12-30",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "3197-770",
+        "ocupacao": "Médico/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 82,
+        "nome_completo": "Luana Macedo",
+        "idade": 65,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida",
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-12-05",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-10-10",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2020-11-03",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "0076-387",
+        "ocupacao": "Professor/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 83,
+        "nome_completo": "Luna Simões",
+        "idade": 34,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-01-09",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "9752-988",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 84,
+        "nome_completo": "Patrícia Costa",
+        "idade": 51,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Casa",
+            "Vida",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2023-06-25",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-12-11",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-10-02",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "7228-697",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 85,
+        "nome_completo": "Carlota Baptista",
+        "idade": 64,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-05-13",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-06-08",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-06-20",
+                "renovacoes": 4
+            }
+        ],
+        "localizacao": "9503-286",
+        "ocupacao": "Advogado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 62
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "nome_completo": "Lourenço Gonçalves",
+        "idade": 35,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Saúde",
+            "Casa",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-10-21",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-08-10",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-01-26",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "1537-785",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 87,
+        "nome_completo": "Benjamim Macedo",
+        "idade": 56,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Saúde",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Saúde",
+                "data_adesao": "2022-09-05",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-09-04",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "8971-349",
+        "ocupacao": "Reformado/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 46
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "nome_completo": "Paulo Silva",
+        "idade": 41,
+        "genero": "Masculino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Saúde",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-12-26",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-11-22",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2022-12-09",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6812-622",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Complementar ao seguro de habitação para segurança financeira a longo prazo.",
+                "probabilidade_conversao": 56
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "nome_completo": "Dinis Moura",
+        "idade": 26,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Automóvel",
+            "Saúde",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2022-06-19",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2021-01-30",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-06-30",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "8201-758",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 90,
+        "nome_completo": "Rodrigo Barbosa",
+        "idade": 36,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-07-03",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "6321-901",
+        "ocupacao": "Técnico/a de Informática",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Cobertura de saúde complementar ao seguro de vida.",
+                "probabilidade_conversao": 67
+            },
+            {
+                "produto_sugerido": "Automóvel",
+                "justificativa": "Considerar seguro automóvel para proteção adicional.",
+                "probabilidade_conversao": 37
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "nome_completo": "Diana Pinto",
+        "idade": 28,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2020-09-26",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-07-20",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "6995-172",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 75
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "nome_completo": "Pilar Gaspar",
+        "idade": 28,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 2,
+        "produtos_atuais": [
+            "Viagens"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-06-05",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "3600-114",
+        "ocupacao": "Engenheiro/a de Software",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 58
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "nome_completo": "Nair Oliveira",
+        "idade": 31,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2022-04-07",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-05-01",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "9801-744",
+        "ocupacao": "Consultor/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 52
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "nome_completo": "Letícia Ribeiro",
+        "idade": 51,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2024-02-27",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2020-09-08",
+                "renovacoes": 3
+            }
+        ],
+        "localizacao": "8840-099",
+        "ocupacao": "Designer Gráfico",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 60
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "nome_completo": "Vasco Macedo",
+        "idade": 36,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Viagens",
+            "Vida"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2021-10-03",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Vida",
+                "data_adesao": "2023-11-13",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "3852-871",
+        "ocupacao": "Enfermeiro/a",
+        "corretor_associado": "Corretor A",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 63
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "nome_completo": "Fabiana Martins",
+        "idade": 52,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 3,
+        "produtos_atuais": [
+            "Vida",
+            "Viagens",
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Vida",
+                "data_adesao": "2021-05-22",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-12-26",
+                "renovacoes": 0
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2022-08-08",
+                "renovacoes": 2
+            }
+        ],
+        "localizacao": "7075-022",
+        "ocupacao": "Comerciante",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 38
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Importante para quem viaja frequentemente.",
+                "probabilidade_conversao": 62
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "nome_completo": "Ema Mendes",
+        "idade": 60,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-08-06",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "1773-506",
+        "ocupacao": "Arquiteto/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": []
+    },
+    {
+        "id": 98,
+        "nome_completo": "Érica Gonçalves",
+        "idade": 26,
+        "genero": "Feminino",
+        "tipo_habitacao": "Própria",
+        "numero_filhos": 1,
+        "produtos_atuais": [
+            "Automóvel"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2021-11-03",
+                "renovacoes": 0
+            }
+        ],
+        "localizacao": "9544-578",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 58
+            },
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 61
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "nome_completo": "Rita Sá",
+        "idade": 55,
+        "genero": "Feminino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 4,
+        "produtos_atuais": [
+            "Viagens",
+            "Automóvel",
+            "Casa"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Viagens",
+                "data_adesao": "2023-12-23",
+                "renovacoes": 4
+            },
+            {
+                "produto": "Automóvel",
+                "data_adesao": "2023-12-22",
+                "renovacoes": 1
+            },
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-05-23",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "4852-773",
+        "ocupacao": "Consultor/a",
+        "corretor_associado": "Corretor C",
+        "sugestoes_ia": [
+            {
+                "produto_sugerido": "Saúde",
+                "justificativa": "Recomendado para famílias com seguro automóvel.",
+                "probabilidade_conversao": 49
+            },
+            {
+                "produto_sugerido": "Vida",
+                "justificativa": "Baseado em clientes com perfil semelhante (seguro automóvel e filhos).",
+                "probabilidade_conversao": 62
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "nome_completo": "Wilson Jesus",
+        "idade": 54,
+        "genero": "Masculino",
+        "tipo_habitacao": "Arrendada",
+        "numero_filhos": 0,
+        "produtos_atuais": [
+            "Casa",
+            "Saúde"
+        ],
+        "historico_compras": [
+            {
+                "produto": "Casa",
+                "data_adesao": "2020-11-26",
+                "renovacoes": 3
+            },
+            {
+                "produto": "Saúde",
+                "data_adesao": "2020-12-23",
+                "renovacoes": 1
+            }
+        ],
+        "localizacao": "8142-712",
+        "ocupacao": "Motorista",
+        "corretor_associado": "Corretor B",
+        "sugestoes_ia": []
+    }
+]

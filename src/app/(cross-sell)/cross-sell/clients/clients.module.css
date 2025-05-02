@@ -1,0 +1,210 @@
+/* Client Management Page Styles */
+.clientManagementSection {
+    display: flex;
+    gap: 25px;
+    height: calc(100% - 70px); /* Adjust based on header height */
+}
+
+.clientListContainer {
+    width: 350px;
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.clientListContainer h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.clientSearch {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.clientList {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-right: -10px; /* Offset scrollbar */
+    padding-right: 10px;
+}
+
+.clientListItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+}
+
+.clientListItem:last-child {
+    border-bottom: none;
+}
+
+.clientListItem:hover {
+    background-color: #f8f9fa;
+}
+
+.clientListItem.selected {
+    background-color: #eef5ff; /* Light blue for selected */
+}
+
+.clientListItem .avatarPlaceholder {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    font-size: 16px; /* Adjust font size for initials */
+}
+
+.clientListInfo p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.clientListInfo p strong {
+    font-size: 0.95em;
+    color: #333;
+}
+
+.clientListInfo p:last-child {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.clientDetailContainer {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.clientDetailContainer h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.clientDetailContent {
+    color: #555;
+}
+
+.clientDetailHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.clientDetailHeader .avatarPlaceholder.large {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    margin-right: 20px;
+}
+
+.clientDetailHeader h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.clientDetailHeader p {
+    margin: 3px 0;
+    font-size: 0.95em;
+    color: #6c757d;
+}
+
+.clientDetailBody .detailSection {
+    margin-bottom: 20px;
+}
+
+.clientDetailBody h5 {
+    font-size: 1.1em;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.clientDetailBody p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.clientDetailBody p strong {
+    color: #343a40;
+}
+
+.currentProducts span {
+    display: inline-block;
+    background-color: #e2e3e5;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Avatar Styling */
+.avatarPlaceholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; /* Fallback color */
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden; /* Ensure image stays within bounds */
+}
+
+.avatarPlaceholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, cropping if needed */
+}
+
+/* Larger avatar for client detail */
+.clientDetailHeader .avatarPlaceholder.large {
+    width: 80px;
+    height: 80px;
+    font-size: 36px; /* Fallback if image fails */
+    margin-right: 20px;
+}
+
+/* Avatar in dashboard client card */
+.clientInfo .avatarPlaceholder {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 20px; /* Fallback if image fails */
+}
+
+/* Avatar in sidebar */
+.userProfile .avatarPlaceholder {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 18px; /* Fallback if image fails */
+}
+

@@ -14,9 +14,20 @@ export default function Home() {
         />
       </div>
       <h1 className="text-4xl font-bold mb-8">Bem vindo a Xcope</h1>
-      <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-        <Link href="/dashboard">Entrar</Link>
-      </button>
+      <div className="flex gap-4">
+        <Link
+          href="/seguros/dashboard"
+          className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Entrar na aplicaçao Seguros
+        </Link>
+        <Link
+          href="/cross-sell/dashboard"
+          className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Entrar na aplicaçao Cross-Sell
+        </Link>
+      </div>
     </div>
   );
 }
