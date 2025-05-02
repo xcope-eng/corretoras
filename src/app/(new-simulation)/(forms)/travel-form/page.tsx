@@ -1,25 +1,70 @@
 'use client'
 import { useRef, useState } from 'react'
 import styles from '../form.module.css'
+import { InsuranceCard } from '@/components/InsuranceOfferCards/InsuranceCard'
+import { insuranceCompanies } from '@/data/insurance/companies'
+import { calculatePremium } from '@/utils/insurance-calculations'
+
+// Add the necessary types
+interface ClientData {
+  name: string;
+  age: number;
+  gender: string;
+  occupation: string;
+  income: number;
+  destination: string;
+  duration: number;
+}
 
 export default function ChooseInsurance() {
   const formRef = useRef<HTMLFormElement>(null)
   const [showOffers, setShowOffers] = useState(false)
   const [clientName, setClientName] = useState('')
+  const [insuranceOffers, setInsuranceOffers] = useState<any[]>([])
 
   const handleReset = () => {
     if (formRef.current) {
       formRef.current.reset()
     }
     setShowOffers(false)
+    setInsuranceOffers([])
   }
+
+  const generateOffers = (clientData: ClientData) => {
+    return insuranceCompanies.travel.map(company => {
+      const product = company.products[0];
+      const premium = calculatePremium(product.basePremium, clientData, 'travel');
+
+      return {
+        company: company.name,
+        companyId: company.id,
+        logoPath: company.logoPath,
+        product: product.name,
+        premium,
+        coverages: product.coverages,
+        description: product.description,
+        contactLink: `#contact-${company.id}`
+      };
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (formRef.current) {
       const formData = new FormData(formRef.current)
-      const name = formData.get('name') as string
-      setClientName(name)
+      const clientData: ClientData = {
+        name: formData.get('name') as string,
+        age: parseInt(formData.get('age') as string),
+        gender: formData.get('gender') as string,
+        occupation: formData.get('occupation') as string,
+        income: parseInt(formData.get('income') as string),
+        destination: formData.get('destination') as string,
+        duration: parseInt(formData.get('duration') as string),
+      }
+
+      setClientName(clientData.name)
+      const offers = generateOffers(clientData);
+      setInsuranceOffers(offers)
       setShowOffers(true)
     }
   }
@@ -108,25 +153,19 @@ export default function ChooseInsurance() {
             <p>Cliente: <strong>{clientName}</strong></p>
           </div>
 
-          <div className="card">
-            <div className="card-body">
-              {/* Example offers */}
-              <div className="grid md:grid-cols-2 gap-4 mt-4">
-                <div className="border rounded-xl p-4 shadow">
-                  <h4 className="mb-2">Seguro Viagem Básico</h4>
-                  <p>Cobertura médica, cancelamento e bagagem</p>
-                  <p><strong>€45</strong></p>
-                </div>
-                <div className="border rounded-xl p-4 shadow">
-                  <h4 className="mb-2">Seguro Viagem Premium</h4>
-                  <p>Inclui tudo do básico + assistência 24h e cobertura COVID-19</p>
-                  <p><strong>€75</strong></p>
-                </div>
+          <div className={styles.card}>
+            <div className={styles.cardBody}>
+              <div className={styles.formGrid}>
+                {insuranceOffers.map((offer, index) => (
+                  <InsuranceCard key={index} offer={offer} />
+                ))}
               </div>
             </div>
           </div>
         </div>
       )}
+
+      
     </div>
   )
 }

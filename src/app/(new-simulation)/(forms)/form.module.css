@@ -4,7 +4,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     padding: 2rem;
     margin-bottom: 2rem;
-  }
+}
   
 .cardBody {
     display: flex;
@@ -52,95 +52,171 @@
 .formCheckLabel {
     font-weight: 500;
 }
-  
 
-/* Insurance Offers Styles */
+/* Insurance Offer Card Styles */
 .offerCard {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s;
     border: 1px solid var(--border-color);
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
+  
 .offerCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.offerCard .card-header {
-    background-color: white;
+.cardHeader {
+    padding: 1.5rem;
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem;
+    background-color: var(--background-light);
 }
 
 .companyInfo {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.companyLogo {
-    width: 32px;
-    height: 32px;
-    margin-right: 0.5rem;
+.companyInfo > div {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-light);
+    padding-right: 1rem;
+    max-width: calc(100% - 100px); /* Leave space for the badge */
 }
 
+.companyLogo {
+    height: 32px;
+    width: auto;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+  
 .companyName {
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
     font-weight: 500;
-    padding: 0.35rem 0.65rem;
+    background-color: var(--success-color);
+    color: white;
+    flex-shrink: 0;
 }
 
-.productName {
+.cardBody {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cardBody h5 {
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    margin: 0;
 }
 
-.productDescription {
+.cardBody p {
+    color: var(--text-medium);
+    margin: 0;
+    line-height: 1.5;
+}
+  
+.premiumContainer {
+    text-align: center;
+    margin: 0.5rem 0;
+    background-color: #4e46e521; /* Light version of primary color */
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+  
+.premiumValue {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+  
+.premiumPeriod {
     color: var(--text-medium);
     font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
-.premiumContainer {
-    background-color: var(--primary-light);
-    color: var(--primary-color);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.premiumValue {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.premiumPeriod {
-    font-size: 0.875rem;
-}
-
-.coverages {
-    margin-bottom: 1rem;
-}
-
-.coverages h6 {
+.cardBody h6 {
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    margin: 0 0 0.75rem 0;
 }
-
+  
 .coveragesList {
-    padding-left: 1.5rem;
-    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
-
+  
 .coveragesList li {
-    margin-bottom: 0.25rem;
-    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    color: var(--text-medium);
+    font-size: 0.95rem;
+}
+  
+.coveragesList li:before {
+    content: "✓";
+    color: var(--success-color);
+    margin-right: 0.75rem;
 }
 
-.offerCard .cardFooter {
-    background-color: white;
+.cardFooter {
+    padding: 1.5rem;
     border-top: 1px solid var(--border-color);
-    padding: 1rem;
+    background-color: var(--background-light);
+}
+
+.contactLink {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.contactLink:hover {
+    background-color: rgb(0, 92, 122);
+}
+
+/* Ensure all text in offer cards is fully visible */
+.offer-card .card-header,
+.offer-card .card-body,
+.offer-card .card-footer,
+.product-name,
+.product-description,
+.premium-value,
+.premium-period,
+.coverages h6,
+.coverages-list li {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
 }

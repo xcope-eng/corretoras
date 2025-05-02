@@ -114,11 +114,11 @@ export default function Dashboard() {
                     <td>
                       <div className="flex items-center">
                         <div className={styles.colorDot} style={{ backgroundColor: '#E30613' }}></div>
-                        Generali
+                        Generali Tranquilidade
                       </div>
                     </td>
-                    <td>43</td>
-                    <td>20%</td>
+                    <td>64</td>
+                    <td>30%</td>
                   </tr>
                   <tr>
                     <td>
@@ -129,16 +129,6 @@ export default function Dashboard() {
                     </td>
                     <td>31</td>
                     <td>14%</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div className="flex items-center">
-                        <div className={styles.colorDot} style={{ backgroundColor: '#009A44' }}></div>
-                        Tranquilidade
-                      </div>
-                    </td>
-                    <td>21</td>
-                    <td>10%</td>
                   </tr>
                 </tbody>
               </table>
