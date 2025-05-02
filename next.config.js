@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const nextConfig = {
   output: 'export',  // Enable static exports
-  basePath: '/seguros', // Replace 'seguros' with your repository name
+  basePath: '/corretoras', // Updated to match your repository name
   images: {
     domains: ['picsum.photos'],
     unoptimized: true, // Required for static export
