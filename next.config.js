@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export',  // Removed: Let Vercel handle standard build unless static export is required
-  basePath: '/corretoras', // Keep basePath, may need Vercel config
+  // basePath: '/corretoras', // Keep basePath, may need Vercel config
   images: {
     domains: ['picsum.photos'],
     // unoptimized: true, // Removed: Not needed for standard build
