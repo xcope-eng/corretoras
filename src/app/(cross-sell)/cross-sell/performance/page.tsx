@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react'; // Removed unused useEffect
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -30,7 +30,8 @@ ChartJS.register(
 );
 
 const PerformancePage = () => {
-  const [metrics, setMetrics] = useState({
+  // Removed unused setMetrics, kept metrics state
+  const [metrics] = useState({
     overallConversionRate: 32.5,
     totalSuggestions: 450,
     acceptedSuggestions: 146,

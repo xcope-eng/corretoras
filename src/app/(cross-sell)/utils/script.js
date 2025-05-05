@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        customersWithRecs.forEach((customer, index) => {
+        customersWithRecs.forEach((customer) => {
             const card = document.createElement("div");
             card.classList.add("client-rec-card");
             card.dataset.clientId = customer.id;

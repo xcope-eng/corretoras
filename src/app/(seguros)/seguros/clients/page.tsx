@@ -37,7 +37,7 @@ export default function ClientsPage() {
 
         const clientMap: Record<string, Client> = {};
 
-        parsed.data.forEach((row: any) => {
+        (parsed.data as CsvRow[]).forEach((row: CsvRow) => {
           const id = row.id;
           if (!clientMap[id]) {
             clientMap[id] = {
@@ -188,3 +188,20 @@ export default function ClientsPage() {
     </div>
   );
 }
+
+
+// Define a type for the parsed CSV row
+interface CsvRow {
+  id: string;
+  nome: string;
+  email: string;
+  telefone: string;
+  tipo_seguro: string;
+  seguradora: string;
+  'valor (€)': string; // CSV header uses this format
+  validade: string;
+  estado: string;
+  // Add other potential fields from CSV if needed
+  [key: string]: unknown; // Allow for other potential columns, use unknown instead of any
+}
+

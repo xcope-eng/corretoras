@@ -20,7 +20,7 @@ export default function ChooseInsurance() {
   const formRef = useRef<HTMLFormElement>(null)
   const [showOffers, setShowOffers] = useState(false)
   const [clientName, setClientName] = useState('')
-  const [insuranceOffers, setInsuranceOffers] = useState<any[]>([])
+  const [insuranceOffers, setInsuranceOffers] = useState<InsuranceOffer[]>([])
 
   const handleReset = () => {
     if (formRef.current) {
@@ -169,3 +169,16 @@ export default function ChooseInsurance() {
     </div>
   )
 }
+
+
+interface InsuranceOffer {
+  company: string;
+  companyId: string;
+  logoPath: string;
+  product: string;
+  premium: number;
+  coverages: string[];
+  description: string;
+  contactLink: string;
+}
+

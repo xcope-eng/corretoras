@@ -30,7 +30,7 @@ export default function HistoryPage() {
         });
 
         // Create simulation history from the CSV data
-        const simulationsList = parsed.data.map((row: any) => ({
+        const simulationsList = (parsed.data as CsvRow[]).map((row: CsvRow) => ({
           id: row.id,
           nome: row.nome,
           data: row.data || new Date().toLocaleDateString('pt-PT'), // Using current date if not in CSV
@@ -167,3 +167,18 @@ export default function HistoryPage() {
     </div>
   );
 }
+
+
+// Define a type for the parsed CSV row
+interface CsvRow {
+  id: string;
+  nome: string;
+  data?: string; // Optional as it might not be present
+  tipo_seguro: string;
+  seguradora: string;
+  'valor (€)': string; // CSV header uses this format
+  estado: string;
+  // Add other potential fields from CSV if needed
+  [key: string]: unknown; // Allow for other potential columns, use unknown instead of any
+}
+

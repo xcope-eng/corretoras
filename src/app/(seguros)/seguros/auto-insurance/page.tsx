@@ -30,9 +30,9 @@ export default function AutoInsurancePage() {
         });
 
         // Filter only auto insurance policies and map to the required format
-        const autoPoliciesList = parsed.data
-          .filter((row: any) => row.tipo_seguro === 'Automóvel')
-          .map((row: any) => ({
+        const autoPoliciesList = (parsed.data as CsvRow[])
+          .filter((row: CsvRow) => row.tipo_seguro === 'Automóvel')
+          .map((row: CsvRow) => ({
             id: row.id,
             nome: row.nome,
             viatura: row.viatura || '-', // Using placeholder if not in CSV
@@ -157,3 +157,19 @@ export default function AutoInsurancePage() {
     </div>
   );
 } 
+
+// Define a type for the parsed CSV row
+interface CsvRow {
+  id: string;
+  nome: string;
+  tipo_seguro: string;
+  viatura?: string; // Optional as it might not be present for all insurance types
+  matricula?: string; // Optional
+  seguradora: string;
+  'valor (€)': string; // CSV header uses this format
+  validade: string;
+  estado: string;
+  // Add other potential fields from CSV if needed
+  [key: string]: unknown; // Allow for other potential columns, use unknown instead of any
+}
+

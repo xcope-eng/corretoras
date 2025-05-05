@@ -29,7 +29,7 @@ export default function InsurancesPage() {
           skipEmptyLines: true,
         });
 
-        const policiesList = parsed.data.map((row: any) => ({
+        const policiesList = (parsed.data as CsvRow[]).map((row: CsvRow) => ({
           id: row.id,
           nome: row.nome,
           tipo_seguro: row.tipo_seguro,
@@ -169,3 +169,18 @@ export default function InsurancesPage() {
     </div>
   );
 }
+
+
+// Define a type for the parsed CSV row
+interface CsvRow {
+  id: string;
+  nome: string;
+  tipo_seguro: string;
+  seguradora: string;
+  'valor (€)': string; // CSV header uses this format
+  validade: string;
+  estado: string;
+  // Add other potential fields from CSV if needed
+  [key: string]: unknown; // Allow for other potential columns, use unknown instead of any
+}
+
